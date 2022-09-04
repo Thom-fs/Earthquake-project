@@ -1,2 +1,4 @@
 pynamodb
 Flask
+requests
+beautifulsoup4

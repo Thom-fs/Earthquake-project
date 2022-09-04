@@ -4,6 +4,15 @@ from flask import Flask
 
 from app.models.earthquake import EarthquakeModel
 
+import requests
+from bs4 import BeautifulSoup
+import csv
+
+url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.atom"
+reponse = requests.get(url)
+page = reponse.content
+soup = BeautifulSoup(page, 'html.parser')
+
 app = Flask(__name__)
 app.debug = False
 
