@@ -30,6 +30,7 @@ def hello_world():
     return "HelloWorld"
 
 
+
 @app.route("/earthquakes")
 def fetch_earthquakes():
     earthquakes = EarthquakeModel.scan()
